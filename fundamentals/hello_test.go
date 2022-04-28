@@ -1,7 +1,6 @@
-package main
+package fundamentals
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -10,10 +9,10 @@ func TestHello(t *testing.T) {
 	// returned value from the code
 	got := Hello()
 	// expected value
-	want := "Hellow world"
+	want := "Hello world"
 
 	if got != want {
-		t.Errorf("got %s want %s", got, want)
+		t.Errorf("got '%s' want '%s'", got, want)
 	}
 }
 
@@ -21,9 +20,4 @@ func TestHello(t *testing.T) {
 func Hello() string {
 	// domain
 	return "Hello world"
-}
-
-func main() {
-	// fmt.println = side effect
-	fmt.Println(Hello())
 }
